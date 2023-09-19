@@ -26,7 +26,7 @@ fi
 mkdir -p ~/fzf_tool/scripts
 
 # The path to the fzf_tools.sh script
-FZF_TOOLS_PATH="~/fzf_tool/scripts/fzf_tools.sh"
+FZF_TOOLS_PATH="$HOME/fzf_tool/scripts/fzf_tools.sh"
 
 # Check if .bashrc already sources fzf_tools.sh
 if ! grep -qxF "source $FZF_TOOLS_PATH" ~/.bashrc; then
