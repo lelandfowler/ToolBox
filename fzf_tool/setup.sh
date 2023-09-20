@@ -28,7 +28,9 @@ mkdir -p ~/fzf_tool/scripts
 # The path to the fzf_tools.sh script
 FZF_TOOLS_PATH="$HOME/fzf_tool/scripts/fzf_tools.sh"
 SCRIPT_PATH="${BASH_SOURCE[0]}"
-SCRIPT_DIR="${SCRIPT_PATH%/.*}"
+echo "$SCRIPT_PATH"
+SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+echo "$SCRIPT_DIR"
 FZF_TOOLS_CURR_PATH="$SCRIPT_DIR/fzf_tools.sh"
 
 # Check if .bashrc already sources fzf_tools.sh
@@ -43,3 +45,4 @@ else
 fi
 
 echo "Installation and setup complete!"
+

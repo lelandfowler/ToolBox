@@ -26,6 +26,7 @@ fh() {
         LINES=5
     fi
 
+
     # User selects a command, and we get the command number and the command
     local SELECTED
     local CMD_NUM
