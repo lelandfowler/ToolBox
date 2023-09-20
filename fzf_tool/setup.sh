@@ -34,9 +34,10 @@ echo "$SCRIPT_DIR"
 FZF_TOOLS_CURR_PATH="$SCRIPT_DIR/fzf_tools.sh"
 
 # Check if .bashrc already sources fzf_tools.sh
-if ! grep -qxF "source $FZF_TOOLS_PATH" ~/.bashrc; then
+if ! cat ~/.bashrc | grep "source \"$FZF_TOOLS_PATH\""; then
     # Copy the fzf_tools.sh script to the scripts directory
     cp "$FZF_TOOLS_CURR_PATH" "$FZF_TOOLS_PATH"
+
     # If not, append the source line to .bashrc
     echo "source \"$FZF_TOOLS_PATH\"" >> ~/.bashrc
     echo "Added fzf_tools.sh to .bashrc"
