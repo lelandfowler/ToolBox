@@ -41,6 +41,8 @@ if ! cat ~/.bashrc | grep "source \"$FZF_TOOLS_PATH\""; then
     # If not, append the source line to .bashrc
     echo "source \"$FZF_TOOLS_PATH\"" >> ~/.bashrc
     echo "Added fzf_tools.sh to .bashrc"
+
+    source ~/.bashrc
 else
     echo "fzf_tools.sh is already sourced in .bashrc"
 fi
